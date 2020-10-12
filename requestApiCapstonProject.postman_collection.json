@@ -1,0 +1,235 @@
+{
+	"variables": [],
+	"info": {
+		"name": "requestApiCapstonProject",
+		"_postman_id": "f378d8fd-a2d7-5415-1d72-bf60df346a75",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "actors",
+			"request": {
+				"url": "http://localhost:5000/actors",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "a658f133-98d6-44c3-a777-c34618e552be",
+					"name": "actors",
+					"originalRequest": {
+						"url": "http://localhost:5000/actors",
+						"method": "GET",
+						"header": [],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "content-length",
+							"key": "content-length",
+							"value": "431",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Sun, 11 Oct 2020 23:10:08 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "server",
+							"key": "server",
+							"value": "Werkzeug/1.0.1 Python/3.7.9",
+							"description": "A name for the server"
+						}
+					],
+					"cookie": [],
+					"responseTime": 49,
+					"body": "{\n  \"actors\": [\n    {\n      \"age\": 20, \n      \"gender\": \"M\", \n      \"id\": 1, \n      \"name\": \"rash\"\n    }, \n    {\n      \"age\": 22, \n      \"gender\": \"M\", \n      \"id\": 2, \n      \"name\": \"howard\"\n    }, \n    {\n      \"age\": 25, \n      \"gender\": \"M\", \n      \"id\": 3, \n      \"name\": \"sheldom\"\n    }, \n    {\n      \"age\": 30, \n      \"gender\": \"F\", \n      \"id\": 4, \n      \"name\": \"Amy\"\n    }\n  ], \n  \"success\": true, \n  \"totoal_actors\": 4\n}\n"
+				}
+			]
+		},
+		{
+			"name": "movies",
+			"request": {
+				"url": "http://localhost:5000/movies",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "ef337302-1e39-4aa5-b4eb-ffe0a84e58e2",
+					"name": "movies",
+					"originalRequest": {
+						"url": "http://localhost:5000/movies",
+						"method": "GET",
+						"header": [],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "content-length",
+							"key": "content-length",
+							"value": "170",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Sun, 11 Oct 2020 23:09:50 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "server",
+							"key": "server",
+							"value": "Werkzeug/1.0.1 Python/3.7.9",
+							"description": "A name for the server"
+						}
+					],
+					"cookie": [],
+					"responseTime": 86,
+					"body": "{\n  \"movies\": [\n    {\n      \"id\": 1, \n      \"release_date\": \"Sun, 11 Oct 2020 01:04:51 GMT\", \n      \"title\": \"TBBT\"\n    }\n  ], \n  \"success\": true, \n  \"total_movies\": 1\n}\n"
+				}
+			]
+		},
+		{
+			"name": "actors",
+			"request": {
+				"url": "http://localhost:5000/actors",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"bernadet\",\n\t\"age\": \"33\",\n\t\"gender\": \"F\"\n}\n\n\n\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "movies",
+			"request": {
+				"url": "http://localhost:5000/movies",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Back to the future\",\n\t\"release_date\": \"2018-03-29T13:34:00.000\"\n}\n\n\n\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "actors",
+			"request": {
+				"url": "http://localhost:5000/actors/1",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"age\": \"23\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "movies",
+			"request": {
+				"url": "http://localhost:5000/movies/1",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"tbbt2\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "actors",
+			"request": {
+				"url": "http://localhost:5000/actors/2",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "movies",
+			"request": {
+				"url": "http://localhost:5000/movies/1",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
