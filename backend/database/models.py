@@ -5,7 +5,7 @@ from sqlalchemy import (
     DateTime
 )
 from flask_sqlalchemy import SQLAlchemy
-DB_NAME = 'agencydb'
+DB_NAME = 'agencydb2'
 DATABASE_NAME = 'postgresql://{}@{}:{}/{}'.format('student', 'localhost', '5432', DB_NAME)
 
 db = SQLAlchemy()

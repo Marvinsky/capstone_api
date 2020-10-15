@@ -68,6 +68,17 @@ The Casting Agency models a company that is responsible for creating movies and 
 >>> db.session.commit()
 ```
 
+## Create roles in Auth0 - 24 hours
+https://mazpe.us.auth0.com/authorize?
+  audience=show&
+  response_type=token&
+  client_id=3lf13WcJ0ciLvsRHvp4umZp3JrgXlwap&
+  redirect_uri=https://127.0.0.1:8080/login-results
+
+return :
+https://127.0.0.1:8080/login-results#access_token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlFBMzl5OWhpclh0QmdWSXlRendRNSJ9.eyJpc3MiOiJodHRwczovL21henBlLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjY5ODc5YmI0OThlMjAwNmI5MmZhNzAiLCJhdWQiOiJzaG93IiwiaWF0IjoxNjAyNDgyMDczLCJleHAiOjE2MDI0ODkyNzMsImF6cCI6IjNsZjEzV2NKMGNpTHZzUkh2cDR1bVpwM0pyZ1hsd2FwIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6YWN0b3JzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyJdfQ.f_Q8to6qq85zTo1TnyVJyuoh1rU2nn1Mcgov68YBO_rKUdOH28r4jCdL8DEREzDBKrm2bSA_P7WwrftYCTWXGWN4JyRvdAEQ7B84pOvovTz9MaVTqqYH2KUUDRU8moOWg7ZmkmfaEfE2WkCE2CeLpz2x9j3JQLg-sbHF0JGa7-d7-o_GUVJ_JCrRjt53PiMAb8guH96fdWXyX5LtgBXy07ol1VyNFJDTHDOkwpginr2eIDfms0fmZ8r7b9seY412IXHxE_sk2Z_TiFhoAc0cOLt45sgp8Ok_Ff62bcEkmzdrjr9YGXBO3r5k3Lit8LocgipHFzcUc45dg4oA7PjYBA&expires_in=7200&token_type=Bearer
+
+
 
 
 

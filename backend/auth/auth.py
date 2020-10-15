@@ -8,7 +8,7 @@ import sys
 
 AUTH0_DOMAIN = 'mazpe.us.auth0.com'  #'udacity-fsnd.auth0.com'
 ALGORITHMS = ['RS256']
-API_AUDIENCE = 'dev'
+API_AUDIENCE = 'show'
 
 ## AuthError Exception
 '''
