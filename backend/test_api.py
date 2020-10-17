@@ -149,7 +149,7 @@ class ApiTestCases(unittest.TestCase):
         self.assertEqual(res.status_code, 200)
         self.assertEqual(data['success'], True)
 
-    def test_delete_actor_delete(self):
+    def test_delete_actor_fail(self):
         id_to_delete = 1000
         res = self.client().delete('/actors/' + str(id_to_delete))
         data = json.loads(res.data)
@@ -169,7 +169,7 @@ class ApiTestCases(unittest.TestCase):
         res = self.client().delete('/movies/' + str(id_to_delete))
         data = json.loads(res.data)
 
-        self.assertEqual()
+        self.assertEqual(res.status_code, 404)
         self.assertEqual(data['success'], False)
 
 
