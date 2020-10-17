@@ -6,7 +6,8 @@ from sqlalchemy import (
 )
 from flask_sqlalchemy import SQLAlchemy
 DB_NAME = 'agencydb'
-DATABASE_NAME = 'postgresql://{}@{}:{}/{}'.format('student', 'localhost', '5432', DB_NAME)
+DATABASE_NAME = 'postgres://kixtjipjkocnow:c7e43e527e9c53284d16d5ded672180fffeb71c8b8c0db295f867c78a3702795@ec2-18-211-86-133.compute-1.amazonaws.com:5432/d46eiv1qs8kbl1'
+#'postgresql://{}@{}:{}/{}'.format('student', 'localhost', '5432', DB_NAME)
 
 db = SQLAlchemy()
 
