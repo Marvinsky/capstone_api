@@ -54,7 +54,7 @@ The Casting Agency models a company that is responsible for creating movies and 
 
 ## Scripts DB interacting with Python
 ```
->>> from api import app
+>>> from app import app
 >>> from database.models import db, Show, Actor, Movie
 >>> db.create_all()
 >>> a = Actor(name='rash', age=20, gender='M')
@@ -73,6 +73,24 @@ The Casting Agency models a company that is responsible for creating movies and 
 git remote add heroku https://git.heroku.com/agencycast.git
 
 git push heroku HEAD:master
+
+remote:        https://agencycast.herokuapp.com/ deployed to Heroku
+
+
+heroku run python manage.py db upgrade --app agencycast
+
+#### ERROR:
+python: can't open file 'manage.py': [Errno 2] No such file or directory
+
+* I can run python manage.py runserver and locahost works
+* git ls-files manage.py --outputs--> manage.py
+
+However,
+* heroku run bash
+* ls manage.py
+I get: ls: cannot access 'manage.py': No such file or directory
+
+It seems that manage.py is in my local but not in my heroku.
 
 
 

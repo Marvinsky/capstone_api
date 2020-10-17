@@ -9,8 +9,8 @@ import json
 from flask_cors import CORS
 import sys
 
-from database.models import db, setup_db, Show, Actor, Movie
-from auth.auth import AuthError, requires_auth
+from .database.models import db, setup_db, Show, Actor, Movie
+from .auth.auth import AuthError, requires_auth
 
 from flask_migrate import Migrate
 

@@ -3,7 +3,7 @@ import unittest
 import json
 from flask_sqlalchemy import SQLAlchemy
 
-from api import create_app
+from app import create_app
 from database.models import setup_db, Show, Movie, Actor
 import datetime
 
