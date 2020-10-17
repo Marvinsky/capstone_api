@@ -9,8 +9,8 @@ import json
 from flask_cors import CORS
 import sys
 
-from .database.models import db, setup_db, Show, Actor, Movie
-from .auth.auth import AuthError, requires_auth
+from models import db, setup_db, Show, Actor, Movie
+from auth import AuthError, requires_auth
 
 from flask_migrate import Migrate
 
@@ -20,7 +20,7 @@ def create_app(test_config=None):
     #db_drop_and_create_all()
     app = Flask(__name__)
     setup_db(app)
-    #migrate = Migrate(app, db)
+    migrate = Migrate(app, db)
     CORS(app)
 
     def paginate_model(request, selection):
