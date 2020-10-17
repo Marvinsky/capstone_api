@@ -277,12 +277,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/actors/1",
-					"protocol": "http",
+					"raw": "{{host}}/actors/1",
 					"host": [
-						"localhost"
+						"{{host}}"
 					],
-					"port": "5000",
 					"path": [
 						"actors",
 						"1"
@@ -319,15 +317,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/movies/2",
-					"protocol": "http",
+					"raw": "{{host}}/movies/1",
 					"host": [
-						"localhost"
+						"{{host}}"
 					],
-					"port": "5000",
 					"path": [
 						"movies",
-						"2"
+						"1"
 					]
 				}
 			},
@@ -349,15 +345,13 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/actors/2",
-					"protocol": "http",
+					"raw": "{{host}}/actors/1",
 					"host": [
-						"localhost"
+						"{{host}}"
 					],
-					"port": "5000",
 					"path": [
 						"actors",
-						"2"
+						"1"
 					]
 				}
 			},
@@ -379,12 +373,10 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/movies/1",
-					"protocol": "http",
+					"raw": "{{host}}/movies/1",
 					"host": [
-						"localhost"
+						"{{host}}"
 					],
-					"port": "5000",
 					"path": [
 						"movies",
 						"1"
