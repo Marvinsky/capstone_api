@@ -112,29 +112,56 @@ HEROKU_POSTGRESQL_GOLD_URL: postgres://kixtjipjkocnow:c7e43e527e9c53284d16d5ded6
 
 * heroku run python manage.py db upgrade --app agencycast
 
+INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+INFO  [alembic.runtime.migration] Will assume transactional DDL.
+INFO  [alembic.runtime.migration] Running upgrade  -> 22e27afde886, empty message
+
 ## Third-Partty Authentication
 
 setup.sh
 
+## Create roles in Auth0 - 48 hours
 
-## Create roles in Auth0 - 48 hours
+ASSISTANT ROLE:  marvin.abisrror@gmail.com
 https://mazpe.us.auth0.com/authorize?audience=show&response_type=token&client_id=3lf13WcJ0ciLvsRHvp4umZp3JrgXlwap&redirect_uri=https://127.0.0.1:8080/login-results
 
-returns:
+token:
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlFBMzl5OWhpclh0QmdWSXlRendRNSJ9.eyJpc3MiOiJodHRwczovL21henBlLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjY5ODc5YmI0OThlMjAwNmI5MmZhNzAiLCJhdWQiOiJzaG93IiwiaWF0IjoxNjAyOTY4ODcwLCJleHAiOjE2MDI5NzYwNzAsImF6cCI6IjNsZjEzV2NKMGNpTHZzUkh2cDR1bVpwM0pyZ1hsd2FwIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyJdfQ.heWd5TyZayx8umf0itEL05V1P3bT3G6aRGrzkTg68KWv9ICJ5enAQRI-ek8gE99zm9e0qKptpgXluWHSSh65D12aTebSwuo_gqQa8nvRn6JFz3xjUofy9EWJmYTSw-3qlkLDEejyQprIksP4a0WnEhhX4F7w2TNtra_1PbilOXmlQJvl12YrYy8Vz8B9n8hSmLB32G7sntEwEUF2jQubjcqo9ykD0L4bGDt0zuD_joC-N7rRohIjlAMXLEfE5XzJmXKu_HsxpxLM4Tjvr4OLn4b14SRWZ-gqrcwEejheJfBRZlg0BELOT3EDip8em2A3uEFmviao5qpWeSk0POLUWg
 
-eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlFBMzl5OWhpclh0QmdWSXlRendRNSJ9.eyJpc3MiOiJodHRwczovL21henBlLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjY5ODc5YmI0OThlMjAwNmI5MmZhNzAiLCJhdWQiOiJzaG93IiwiaWF0IjoxNjAyOTE3NTk4LCJleHAiOjE2MDI5MjQ3OTgsImF6cCI6IjNsZjEzV2NKMGNpTHZzUkh2cDR1bVpwM0pyZ1hsd2FwIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6YWN0b3JzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyJdfQ.H80qhB7db1g8HVFmkzkwTVNPHy6Bk-enwwWEiyvtaPd40CBoNiIIGHk4do3DOAuhDNo-3yIDu45z5_GqsRrc6740x5PM47ijr5t0Fy_rX-lqy7CVN7rJU8WeLifb7xPXglJ-QGYngcS106Jo6oPwPng7m53PM15LQaUUG3iT8SoDtwgRCZr1dr9cWgJTUQbi8EKJdiMvVkPfNdAiEbFB0CCqajujadrNgvKpckkU-Lr9GQzKKitg5RfPmA0iqtGa27yzusoGjSvSm6hDuN7LUSLMJeqTOs-cOL4MVIGynOQujSZQm6gBVf8C9U5799xqgNu1mvj__2SVdipgrzsM_Q
-
------------------------------------------------------------------------
-
-https://mazpe.us.auth0.com/authorize?
-  audience=show&
-  response_type=token&
-  client_id=3lf13WcJ0ciLvsRHvp4umZp3JrgXlwap&
-  redirect_uri=https://127.0.0.1:8080/login-results
-
-https://127.0.0.1:8080/login-results#access_token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlFBMzl5OWhpclh0QmdWSXlRendRNSJ9.eyJpc3MiOiJodHRwczovL21henBlLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjU5YjU2MjE1YWIzYTAwNzcyZDA2OGEiLCJhdWQiOiJzaG93IiwiaWF0IjoxNjAyOTIwMDY4LCJleHAiOjE2MDI5MjcyNjgsImF6cCI6IjNsZjEzV2NKMGNpTHZzUkh2cDR1bVpwM0pyZ1hsd2FwIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6YWN0b3JzIiwiZGVsZXRlOm1vdmllcyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiLCJwb3N0Om1vdmllcyJdfQ.NfTypgAaqUCkDEe31TNpT61B60Oag5IVc65VdN8RbZstRon2Uc_AWm9eE6ImP9owytC4a-CNVvRTJMZt2nBXLx60qPTwG7ngUW6F0ft1tNWuk5BR1fOWxaDRz3GGg8RXoGjJwNJucXYckowsPUCeCH6rh68fiZexopcKwdAEFfKV6JB63VJw92OWKIvjd92ib5WUV6iW3BJen-NVlFChaCRTw2qATBytCR21J6pis7P3iRIOXJYmGGwR1iqJ-k_v4zwSsT8ONUs-Bk4wEJb8RhBpNfspwnuYYc_3jACX5XEXykStLH0-3BojDnpOCmq5XXnyjA9UKuN7yiUjuaCWBA&expires_in=7200&token_type=Bearer
+"permissions": [
+    "get:actors",
+    "get:movies"
+  ]
 
 
+DIRECTOR ROLE: nivramsky@gmail.com
+https://mazpe.us.auth0.com/authorize?audience=show&response_type=token&client_id=3lf13WcJ0ciLvsRHvp4umZp3JrgXlwap&redirect_uri=https://127.0.0.1:8080/login-results
 
+token:
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlFBMzl5OWhpclh0QmdWSXlRendRNSJ9.eyJpc3MiOiJodHRwczovL21henBlLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjhiNWJjZDc5Y2VjYTAwNzVmM2VjNzIiLCJhdWQiOiJzaG93IiwiaWF0IjoxNjAyOTY4OTUyLCJleHAiOjE2MDI5NzYxNTIsImF6cCI6IjNsZjEzV2NKMGNpTHZzUkh2cDR1bVpwM0pyZ1hsd2FwIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6YWN0b3JzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyJdfQ.cYzA-GxDMZAS02LfRnuBHtc1Q2t_-H93GsYagyhrBQkA3Rh85IoSez3G_PQrr-aFtJIoQxOdS19SferAFDSXYbqPrOxhsOHXNHw-Loz_9gyZD1qUxX50ud3SbiGLhLEO79fF8iGel0AaAfdgi2RHoPfp9ecT1njtEQkZKoNe_YQDKLyFoLKDxkvC5OL828JFSyNt1Gsr9CbtHwBIO4hdsEle8ZbHd-9j0CD1cm32T25DlRtKBw4VGzcbzNpPtLdGeyVYri-yDUMFfG3PMPwV2FeKQ3pCzgRkS6s3J-BnKDc-8Iei_0uLWgnNjTZBTESu4z6t4Wm40fxVgQNWcdtPhA
 
+"permissions": [
+    "delete:actors",
+    "get:actors",
+    "get:movies",
+    "patch:actors",
+    "patch:movies",
+    "post:actors"
+  ]
 
+PRODUCER ROLE: mabisrror@utec.edu.pe
+https://mazpe.us.auth0.com/authorize?audience=show&response_type=token&client_id=3lf13WcJ0ciLvsRHvp4umZp3JrgXlwap&redirect_uri=https://127.0.0.1:8080/login-results
+
+token:
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlFBMzl5OWhpclh0QmdWSXlRendRNSJ9.eyJpc3MiOiJodHRwczovL21henBlLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZjU5YjU2MjE1YWIzYTAwNzcyZDA2OGEiLCJhdWQiOiJzaG93IiwiaWF0IjoxNjAyOTY5MDM2LCJleHAiOjE2MDI5NzYyMzYsImF6cCI6IjNsZjEzV2NKMGNpTHZzUkh2cDR1bVpwM0pyZ1hsd2FwIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6YWN0b3JzIiwiZGVsZXRlOm1vdmllcyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiLCJwb3N0Om1vdmllcyJdfQ.AlmKiK521xXo3mZYbDGnCWWBKgo0RNduodHRnu4YDKpEc-WBinZNC_7A6liSV9LhF5SjTrvjUOzPkQZzdaLDz1N6U_GRAZNn99EZbc_Nrc1GDZcN3tN92sjdXpEMaD2BhGPz2LdSxK6KeToSaEOh8UzN9sbvoEIs1CLfHFTT1NgyD-Bn36UW9G1aq5-oMKbDuuZAMD29poWsxnMih4YKuBeB9WgzeNGdf4kfq5NoQL5FlGEReE7UkZzAyNJJ9UITJYfYi5FhkwDQzDzm2tUpKc96gcQjEszqgrpMBWMOwhWj-A04iNYZE9Xi-M-ovVIMOv6s0VEBw2qbLv6M-GubrQ
+
+"permissions": [
+    "delete:actors",
+    "delete:movies",
+    "get:actors",
+    "get:movies",
+    "patch:actors",
+    "patch:movies",
+    "post:actors",
+    "post:movies"
+  ]
