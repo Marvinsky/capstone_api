@@ -68,7 +68,21 @@ The Casting Agency models a company that is responsible for creating movies and 
 >>> db.session.commit()
 ```
 
-## Create roles in Auth0 - 24 hours
+## Deployment
+
+git remote add heroku https://git.heroku.com/agencycast.git
+
+git push heroku HEAD:master
+
+
+
+
+## Third-Partty Authentication
+
+setup.sh
+
+
+## Create roles in Auth0 - 48 hours
 https://mazpe.us.auth0.com/authorize?
   audience=show&
   response_type=token&
