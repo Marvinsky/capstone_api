@@ -70,11 +70,11 @@ The Casting Agency models a company that is responsible for creating movies and 
 
 ## Deployment
 
-git remote add heroku https://git.heroku.com/agencycast.git
+* git remote add heroku https://git.heroku.com/agencycast.git
 
-git push heroku HEAD:master
+* git push heroku HEAD:master
 
-remote:        https://agencycast.herokuapp.com/ deployed to Heroku
+  remote:        https://agencycast.herokuapp.com/ deployed to Heroku
 
 
 heroku run python manage.py db upgrade --app agencycast
@@ -92,8 +92,25 @@ I get: ls: cannot access 'manage.py': No such file or directory
 
 It seems that manage.py is in my local but not in my heroku.
 
+### IF ERROR FIXED
+* heroku addons:create heroku-postgresql:hobby-dev --app agencycast
+
+Creating heroku-postgresql:hobby-dev on ⬢ agencycast... free
+Database has been created and is available
+ ! This database is empty. If upgrading, you can transfer
+ ! data from another database with pg:copy
+Created postgresql-polished-75028 as HEROKU_POSTGRESQL_GOLD_URL
+Use heroku addons:docs heroku-postgresql to view documentation
 
 
+* heroku config --app agencycast
+DATABASE_URL:               postgres://jyrksohpzsilpa:0e8d14d644dcb97740ad5af88c23e7611f0b626ff57d634218ff57cff142a001@ec2-52-202-146-43.compute-1.amazonaws.com:5432/df35itb1n1jqq8
+EXCITED:                    true
+HEROKU_POSTGRESQL_GOLD_URL: postgres://kixtjipjkocnow:c7e43e527e9c53284d16d5ded672180fffeb71c8b8c0db295f867c78a3702795@ec2-18-211-86-133.compute-1.amazonaws.com:5432/d46eiv1qs8kbl1
+
+* git push heroku HEAD:master
+
+* heroku run python manage.py db upgrade --app agencycast
 
 ## Third-Partty Authentication
 
@@ -101,11 +118,7 @@ setup.sh
 
 
 ## Create roles in Auth0 - 48 hours
-https://mazpe.us.auth0.com/authorize?
-  audience=show&
-  response_type=token&
-  client_id=3lf13WcJ0ciLvsRHvp4umZp3JrgXlwap&
-  redirect_uri=https://127.0.0.1:8080/login-results
+https://mazpe.us.auth0.com/authorize?audience=show&response_type=token&client_id=3lf13WcJ0ciLvsRHvp4umZp3JrgXlwap&redirect_uri=https://127.0.0.1:8080/login-results
 
 returns:
 
