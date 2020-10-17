@@ -20,7 +20,7 @@ def create_app(test_config=None):
     #db_drop_and_create_all()
     app = Flask(__name__)
     setup_db(app)
-    migrate = Migrate(app, db)
+    #migrate = Migrate(app, db)
     CORS(app)
 
     def paginate_model(request, selection):
