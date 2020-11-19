@@ -165,3 +165,17 @@ eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlFBMzl5OWhpclh0QmdWSXlRendRNSJ9.eyJ
     "post:actors",
     "post:movies"
   ]
+
+### Connect to Non-relational database -> MongoDB
+
+## Commands
+
+To run MongoDB (i.e. the mongod process) manually as a background process, issue the following:
+mongod --config /usr/local/etc/mongod.conf --fork
+
+mongo
+
+show dbs;
+
+use pets;
+db.dropDatabase();

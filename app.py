@@ -71,7 +71,7 @@ def create_app(test_config=None):
         release_date = body.get('release_date', '')
         try:
             movie = Movie(title=title, release_date=release_date)
-            movie.insert()
+            movie.save()
 
             selection = Movie.query.order_by(Movie.id).all()
             current_movies = paginate_model(request, selection)
@@ -90,21 +90,32 @@ def create_app(test_config=None):
     @requires_auth('post:actors')
     def create_actor(jwt):
         body = request.get_json()
+        print("body: ", body)
         name = body.get('name', '')
         age = body.get('age', 0)
         gender = body.get('gender', 'M')
         try:
-            actor = Actor(name=name, age=age, gender=gender)
-            actor.insert()
-
+            print("before actor creation")
+            actor = Actor(name=name, age=int(age), gender=gender)
+            print("after actor creation")
+            actor.save()
+            print("after insert")
+            
+            return jsonify({
+                'success': True
+            }), 200
+            
+            '''
             selection = Actor.query.order_by(Actor.id).all()
             current_actors = paginate_model(request, selection)
+            print("after current_actors")
             return jsonify({
                 'success': True,
                 'created': actor.id,
                 'actors': current_actors,
                 'total_actors': len(selection)
             }), 200
+            '''
         except Exception as e:
             abort(422)
 
